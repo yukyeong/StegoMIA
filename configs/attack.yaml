@@ -1,0 +1,15 @@
+model_path: ./outputs/checkpoints/model.pt
+pretrained_model_path: ./pretrained/ViT-B-16.pt
+model_name: ViT-B-16
+output_dir: ./outputs/attack
+device: cuda
+batch_size: 32
+hyper_lambda: 0.5
+seed: 42
+
+member_image_dir: ./data/cover
+member_token_file: ./data/captions.txt
+stego_image_dir: ./data/stego
+clean_image_dir: ./data/cover
+non_member_image_dir: ./data/nonmember
+non_member_caption_file: ./data/nonmember_captions.csv

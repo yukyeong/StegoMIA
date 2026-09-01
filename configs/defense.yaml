@@ -1,0 +1,19 @@
+name: defense_finetune
+train_data: ./data/cover
+train_token_file: ./data/captions.txt
+checkpoint: ./outputs/checkpoints/model.pt
+logs: ./outputs/logs
+checkpoints_dir_path: ./outputs/checkpoints/defense
+output_results_file: ./outputs/defense/finetune_val.txt
+final_model_name: defense_finetune.pt
+
+model_name: ViT-B/16
+batch_size: 64
+lr: 4.5e-6
+epochs: 10
+num_warmup_steps: 50
+device: cuda
+seed: 123
+inmodal: true
+complete_finetune: true
+save_final: true

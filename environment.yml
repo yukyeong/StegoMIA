@@ -1,0 +1,23 @@
+name: stegomia
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python>=3.10
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - open_clip_torch
+      - numpy
+      - pandas
+      - pillow
+      - scikit-image
+      - scikit-learn
+      - tqdm
+      - ftfy
+      - regex
+      - pyyaml
+      - omegaconf
+      - nltk

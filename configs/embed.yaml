@@ -1,0 +1,15 @@
+data_root: ./data
+output_dir: ./outputs
+
+cover_dir: ./data/cover
+foreground_dir: ./data/foreground
+mask_dir: ./data/masks
+stego_dir: ./data/stego
+caption_file: ./data/captions.txt
+
+domain: dct
+key: 1234
+block_size: 8
+freq: [3, 3]
+min_magnitude: 2.0
+seed: 42

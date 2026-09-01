@@ -1,0 +1,10 @@
+model_path: ./outputs/checkpoints/model.pt
+pretrained_model_path: ./pretrained/ViT-B-16.pt
+model_name: ViT-B-16
+device: cuda
+batch_size: 32
+output_dir: ./outputs/eval
+
+clean_image_dir: ./data/cover
+stego_image_dir: ./data/stego
+caption_file: ./data/captions.txt
