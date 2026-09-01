@@ -76,7 +76,7 @@ python embed.py region \
   --caption_file data/captions.txt \
   --stego_foreground_dir outputs/stego_foreground \
   --stego_output_dir data/stego \
-  --domain dct --key 1234 --freq 3 3
+  --domain dct --key [Captions] --freq 3 3
 ```
 
 Full-image embedding:
@@ -86,7 +86,7 @@ python embed.py full \
   --clean_dir data/cover \
   --caption_file data/captions.txt \
   --output_dir data/stego \
-  --domain dct --key 1234
+  --domain dct --key [Captions]
 ```
 
 If you already have masks, composite foregrounds with:
@@ -106,7 +106,7 @@ python train.py prepare \
   --clean_dir data/cover \
   --caption_file data/captions.txt \
   --output_dir outputs/data_configs \
-  --ratios 0.01 0.02 0.05
+  --ratios 0.005 0.01 0.02 0.05 0.10 
 ```
 
 ### 3. Train
@@ -118,7 +118,7 @@ python train.py stego \
   --stego_image_dir data/stego \
   --pretrained_model_path pretrained/ViT-B-16.pt \
   --model ViT-B-16 \
-  --epochs 10 --batch_size 32
+  --epochs 30 --batch_size 32
 ```
 
 ### 4. Membership inference
@@ -135,7 +135,7 @@ python attack.py stego \
   --non_member_animal_dir data/nonmember \
   --non_member_animal_csv data/nonmember_captions.csv \
   --output_dir outputs/attack \
-  --hyper_lambda 0.5
+  --hyper_lambda 0.5 [-1 -0.5 0 0.5 1 1.5]
 ```
 
 Cosine-similarity baseline:
@@ -200,7 +200,8 @@ If you use this code, please cite:
 ```bibtex
 @article{stegomia2026,
   title={Membership Inference through Frequency-Domain Image Steganography in Multimodal Contrastive Learning},
-  author={{StegoMIA Authors}},
+  journal={ }
+  author={{Yu Yang,Yixuan Zhang，Qian Xiao，Rui Zhu*，Qikun Liang}},
   year={2026}
 }
 ```
